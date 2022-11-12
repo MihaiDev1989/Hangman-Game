@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Hangman Game</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>The Hangman Game</h1>
+        <div class="game-container">
+            <div class="draw-content">
+                <svg height="250" width="200" class="figure-container">
+                    <!-- Rod -->
+                    <line x1="60" y1="20" x2="140" y2="20" />
+                    <line x1="140" y1="20" x2="140" y2="50" />
+                    <line x1="60" y1="20" x2="60" y2="230" />
+                    <line x1="20" y1="230" x2="100" y2="230" />
+    
+                    <!-- Head -->
+                    <circle cx="140" cy="70" r="20" class="figure-part" />
+                    <!-- Body -->
+                    <line x1="140" y1="90" x2="140" y2="150" class="figure-part" />
+                    <!-- Legs -->
+                    <line x1="140" y1="150" x2="120" y2="180" class="figure-part" />
+                    <line x1="140" y1="150" x2="160" y2="180" class="figure-part" />
+                    <!-- Arms -->
+                    <line x1="140" y1="120" x2="120" y2="100" class="figure-part" />
+                    <line x1="140" y1="120" x2="160" y2="100" class="figure-part" />
+                    <!-- Feet -->
+                    <ellipse cx="114" cy="180" rx="8" ry="4" class="figure-part"></ellipse>
+                    <ellipse cx="165" cy="180" rx="8" ry="4" class="figure-part"></ellipse>
+                    <!-- Hand -->
+                    <ellipse cx="114" cy="100" rx="8" ry="4" class="figure-part"></ellipse>
+                    <ellipse cx="165" cy="100" rx="8" ry="4" class="figure-part"></ellipse>
+                    <!-- Eyes -->
+                    <circle cx="132" cy="65" r="2" class="figure-part eyes" />
+                    <circle cx="147" cy="65" r="2" class="figure-part eyes" />
+                    <!-- Nose -->
+                    <line x1="140" y1="65" x2="140" y2="73" class="figure-part"></line>
+                    <!-- Mouth -->
+                    <path d="M 132 80 C 135 75, 147 75, 150 80" stroke="black" fill="transparent" class="figure-part"></path>
+                    <!-- neck line through -->
+                    <line x1="120" y1="90" x2="160" y2="90" class="figure-part"></line>
+                </svg>
+            </div>
+            <div class="text-content test">
+                <div class="word add-margin" id="word"></div>
+                <div class="wrong-letters-container">
+                    <div class="wrong-letters" id="wrong-letters"></div>
+                </div>
+            </div>
+        </div>
+        <!-- Container for final message -->
+        <div class="popup-container" id="popup-container">
+            <div class="popup">
+                <h2 id="final-message"></h2>
+                <button class="btn btn-primary" id="play-button">Play Again</button>
+            </div>
+        </div>
+        <!-- Notification -->
+        <div class="notification-container" id="notification-container">
+            <p>You have already entered this letter</p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
