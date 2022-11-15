@@ -63,7 +63,9 @@ function showNotification() {
 
 window.addEventListener('keydown', e => {
     let char = e.keyCode;
-    if (char >= 65 && char <= 90) {
+    let A = 65;
+    let Z = 90;
+    if (char >= A && char <= Z) {
         const letter = e.key;
         if (wordToGuess.includes(letter)) {
             if (!correctLetters.includes(letter)) {

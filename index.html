@@ -11,6 +11,10 @@
 <body>
     <div class="container">
         <h1>The Hangman Game</h1>
+        <!-- Notification -->
+        <div class="notification-container" id="notification-container">
+            <p>You have already entered this letter</p>
+        </div>
         <div class="game-container">
             <div class="draw-content">
                 <svg height="250" width="200" class="figure-container">
@@ -60,10 +64,6 @@
                 <h2 id="final-message"></h2>
                 <button class="btn btn-primary" id="play-button">Play Again</button>
             </div>
-        </div>
-        <!-- Notification -->
-        <div class="notification-container" id="notification-container">
-            <p>You have already entered this letter</p>
         </div>
     </div>
     <script src="script.js"></script>
